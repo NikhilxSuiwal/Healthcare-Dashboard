@@ -24,4 +24,4 @@ The dashboard allows users to view patient details, diagnosis history, and healt
 2. Open `index.html` in your browser
 
 ## 🔗 Live Demo
-(will be added soon)
+(https://healthcare-dashboard-chi-red.vercel.app/)
