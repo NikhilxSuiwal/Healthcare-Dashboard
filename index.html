@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCare Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Navbar -->
+        <nav>
+            <div class="left">
+                <img src="./Assets/TestLogo.svg" alt="">
+            </div>
+            <div class="center">
+                <div class="nav-item">
+                    <img src="./Assets/Home-logo.svg" alt="">
+                    <h3>Overview</h3>
+                </div>
+                <div class="nav-item active-nav">
+                    <img src="./Assets/patient-logo.svg" alt="">
+                    <h3>Patients</h3>
+                </div>
+                <div class="nav-item">
+                    <img src="./Assets/schedule-logo.svg" alt="">
+                    <h3>Schedule</h3>
+                </div>
+                <div class="nav-item">
+                    <img src="./Assets/message-logo.svg" alt="">
+                    <h3>Message</h3>
+                </div>
+                <div class="nav-item">
+                    <img src="./Assets/transaction-logo.svg" alt="">
+                    <h3>Transaction</h3>
+                </div>
+            </div>
+            <div class="right">
+                <img class="profile-img"
+                    src="./Assets/dr-jose-img/senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc@2x.png"
+                    alt="">
+
+                <div class="dr-name">
+                    <h3>Dr. Jose Simmons</h3>
+                    <p>General Practitioner</p>
+                </div>
+                <div class="divider"></div>
+                <div class="actions">
+                    <img src="./Assets/settings-logo/settings_FILL0_wght300_GRAD0_opsz24@2x.png" alt="">
+                    <img src="./Assets/3dots-logo/more_vert_FILL0_wght300_GRAD0_opsz24@2x.png" alt="">
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Page -->
+        <main>
+            <!-- Left Side bar -->
+            <div class="left-bar">
+                <div class="top">
+                    <h3>Patients</h3>
+                    <img src="./Assets/search-icon/search_FILL0_wght300_GRAD0_opsz24@2x.png" alt="">
+                </div>
+                <div id="patient-list"></div>
+            </div>
+
+            <div class="center-bar">
+
+                <!-- Diagnosis History -->
+
+                <div class="c-top">
+                    <h3>Diagnosis History</h3>
+                    <div class="bp-card">
+                        <!-- Left card -->
+                        <div class="bp-left">
+                            <div class="top">
+                                <h4>Blood Pressure</h4>
+                                <p>Last 6 months <span><img src="./Assets/hollow-down-arrow.svg" alt=""></span> </p>
+                            </div>
+
+                            <!-- Charts -->
+                            <div class="chart-container">
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Right Card -->
+                        <div class="bp-right">
+                            <div class="sys">
+                                <div class="sys-circle"></div>
+                                <h4>Systolic</h4>
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                            <div class="bp-divider"></div>
+                            <div class="dia">
+                                <div class="dia-circle"></div>
+                                <h4>Diastolic</h4>
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Diagnosis History bottom Cards -->
+                    <div class="cards">
+                        <div class="resp-card">
+                            <img src="./Assets/respiratory rate/respiratory rate@2x.png" alt="">
+                            <h5>Respiratory Rate</h5>
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                        <div class="temp-card">
+                            <img src="./Assets/temperature/temperature@2x.png" alt="">
+                            <h5>Temperature</h5>
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                        <div class="heart-card">
+                            <img src="./Assets/HeartBPM/HeartBPM@2x.png" alt="">
+                            <h5>Heart Rate</h5>
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diagnostic List -->
+                <div class="c-bottom">
+                    <h3>Diagnostic List</h3>
+
+                    <div class="header">
+                        <h4>Problem/Diagnosis</h4>
+                        <h4>Description</h4>
+                        <h4>Status</h4>
+                    </div>
+
+                    <div id="diagnostic-list" class="list-container">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Container -->
+            <div class="right-bar">
+                <!-- Patient Details Section -->
+                <div class="user">
+                    <div class="basic-dets">
+                        <img id="profile-pic" src="./Assets/User/Layer 2@2x.png" alt="">
+                        <h3 id="patient-name" >Jessica Taylor</h3>
+                    </div>
+                    <div class="details">
+                        <div class="all-details">
+                            <img src="./Assets/calendar/BirthIcon@2x.png" alt="">
+                            <div class="dets">
+                                <p>Date of Birth</p>
+                                <h3 id="dob" >August 23, 1996</h3>
+                            </div>
+                        </div>
+                        <div class="all-details">
+                            <img src="./Assets/Gender/FemaleIcon@2x.png" alt="">
+                            <div class="dets">
+                                <p>Gender</p>
+                                <h3 id="gender">Female</h3>
+                            </div>
+                        </div>
+                        <div class="all-details">
+                            <img src="./Assets/PhoneIcon/PhoneIcon@2x.png" alt="">
+                            <div class="dets">
+                                <p>Contact Info.</p>
+                                <h3 id="phone">(415) 555-1234</h3>
+                            </div>
+                        </div>
+                        <div class="all-details">
+                            <img src="./Assets/PhoneIcon/PhoneIcon@2x.png" alt="">
+                            <div class="dets">
+                                <p>Emergency Contacts</p>
+                                <h3 id="emergency-ph">(415) 555-5678</h3>
+                            </div>
+                        </div>
+                        <div class="all-details">
+                            <img src="./Assets/InsuranceIcon/InsuranceIcon@2x.png" alt="">
+                            <div class="dets">
+                                <p>Insurance Provider</p>
+                                <h3 id="insurance">Sunrise Health Assurance</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <button>Show All Information</button>
+                </div>
+
+                <!-- Lab Results Section -->
+                <div class="results">
+                    <h3>Lab Results</h3>
+                    <div id="lab-results" class="test-container"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
